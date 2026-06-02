@@ -5,7 +5,7 @@ A statistically robust framework for detecting and classifying hysteresis patter
 This code accompanies:
 
 > Terzić, T. (2026), *A&A* (submitted)  
-> "A statistically robust framework for detecting and classifying hysteresis patterns in spectral evolution"
+> "A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution"
 
 ---
 
@@ -249,7 +249,7 @@ If you use this code, please cite:
 ```bibtex
 @article{Terzic2026,
   author  = {Terzi{\'c}, T.},
-  title   = {A statistically robust framework for detecting and classifying hysteresis patterns in spectral evolution},
+  title   = {A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution},
   journal = {A\&A},
   year    = {2026},
   note    = {submitted}
