@@ -31,6 +31,7 @@ hysteresis-detection/
 ├── generate_candidates.py    # Generate pool of synthetic trajectories for visual selection
 ├── signal_gallery.py         # Produce the signal gallery figure (Fig. X of the paper)
 ├── null_gallery.py           # Produce the null model gallery figure (Fig. X of the paper)
+├── plot_arms_vs_aabs.py      # Produce the A_rms vs A_abs figure (Fig. C.1 of the paper)
 ├── examples/                 # Example CSV files (the four paper trajectories)
 │   ├── signal_a.csv          # (a) Clean single loop
 │   ├── signal_b.csv          # (b) Incomplete path
@@ -49,6 +50,7 @@ The scripts depend on each other as follows:
 generate_candidates.py          # defines the flare model and pool generation
     └── signal_gallery.py       # imports from generate_candidates; produces paper figures and CSV files
         └── null_gallery.py     # reads CSV from signal_gallery; produces null model figures
+    └── plot_arms_vs_aabs.py    # imports from generate_candidates; produces Fig. C.1
 
 hysteresis_core.py              # standalone scientific library; no dependencies on other scripts
     └── analyse_hysteresis.py   # imports from hysteresis_core; analyses any CSV file
@@ -103,6 +105,9 @@ done
 
 # Generate the null model gallery (Fig. X)
 python null_gallery.py --signal_csv results/signal_a.csv --outdir results
+
+# Generate the A_rms vs A_abs figure (Fig. C.1)
+python plot_arms_vs_aabs.py --K 10000 --outdir results
 ```
 
 ### Use the library in your own code
@@ -184,6 +189,8 @@ p-values are reported to 3 decimal places. With the default `K_null = 10 000` su
 | Statistic | Symbol | Description |
 |-----------|--------|-------------|
 | Normalised area | $A_\mathrm{norm}$ | Signed open-path area divided by convex hull area. Primary detection statistic. Positive = CCW; negative = CW. |
+| Absolute area | $A_\mathrm{abs}$ | Sum of absolute triangle areas, divided by convex hull area. Total unsigned rotational content. |
+| RMS area | $A_\mathrm{rms}$ | Root-mean-square of triangle areas, divided by convex hull area. Upweights large contributions relative to $A_\mathrm{abs}$. |
 | Cancellation ratio | $R_\mathrm{can}$ | $\|A_\mathrm{open}\| / A_\mathrm{abs}$. Near 1 = consistent orientation; near 0 = strong self-crossing. |
 | Closure fraction | $f_\mathrm{cl}$ | $\|A_\mathrm{closure}\| / \|A_\mathrm{tot}\|$. Near 0 = well-closed path; near 1 = open path. |
 | Closure distance | $d_\mathrm{cl}$ | Endpoint separation in units of measurement uncertainty. Near 0 = well-closed; large = open path. |

@@ -40,6 +40,9 @@ class HysteresisResult:
         Total signed area (A_open + A_closure).
     A_norm : float
         Normalised open-path area (divided by convex hull area).
+    A_hull : float
+        Convex hull area of the centroid-centred trajectory. Used as the normalisation
+        denominator for A_norm, A_abs, and A_rms.
     A_abs : float
         Absolute incremental area (sum of |a_i|).
     A_rms : float
@@ -85,6 +88,7 @@ class HysteresisResult:
     A_open:      float = np.nan
     A_closure:   float = np.nan
     A_tot:       float = np.nan
+    A_hull:      float = np.nan
     A_norm:      float = np.nan
     A_abs:       float = np.nan
     A_rms:       float = np.nan
@@ -117,6 +121,7 @@ class HysteresisResult:
             "  Hysteresis Detection Summary",
             "=" * 56,
             f"  A_open    = {self.A_open:+.4f}",
+            f"  A_hull    = {self.A_hull:.4f}",
             f"  A_norm    = {self.A_norm:+.4f}",
             f"  A_abs     = {self.A_abs:.4f}",
             f"  R_cancel  = {self.R_cancel:.3f}",
@@ -213,6 +218,7 @@ def compute_areas(x, y, sx=None, sy=None):
         A_norm = A_open / A_hull
     except Exception:
         # Degenerate case: all points are collinear, convex hull has zero area. A_open is also zero in this case, so there is no loop to detect.
+        A_hull = np.nan
         A_norm = np.nan
         warnings.warn("All points are collinear or nearly so: convex hull area is zero. "
                       "No loop structure is possible; A_norm set to NaN.",
@@ -249,6 +255,7 @@ def compute_areas(x, y, sx=None, sy=None):
         A_open=A_open,
         A_closure=A_closure,
         A_tot=A_tot,
+        A_hull=A_hull,
         A_norm=A_norm,
         A_abs=A_abs,
         A_rms=A_rms,
