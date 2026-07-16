@@ -2,8 +2,7 @@
 # Visit https://citation-file-format.github.io/ to learn more about CITATION.cff files.
 cff-version: 1.2.0
 message: >-
-  If you use this software, please cite the article from
-  preferred-citation below.
+  If you use this software, please cite the article from preferred-citation below.
 type: software
 title: >-
   hysteresis-detection: A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution
@@ -36,3 +35,4 @@ preferred-citation:
     - type: other
       value: "arXiv:2606.28146"
       description: "arXiv preprint"
+      url: "https://arxiv.org/abs/2606.28146"
