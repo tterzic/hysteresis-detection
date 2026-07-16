@@ -1,0 +1,38 @@
+# This CITATION.cff file was generated for the hysteresis-detection repository.
+# Visit https://citation-file-format.github.io/ to learn more about CITATION.cff files.
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite the article from
+  preferred-citation below.
+type: software
+title: >-
+  hysteresis-detection: A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution
+authors:
+  - family-names: "Terzić"
+    given-names: "Tomislav"
+    affiliation: "University of Rijeka, Faculty of Physics"
+    orcid: "https://orcid.org/0000-0002-4209-3407"  # TODO: insert your ORCID iD
+repository-code: "https://github.com/tterzic/hysteresis-detection"
+license: MIT
+keywords:
+  - astrophysics
+  - hysteresis
+  - time-series analysis
+  - astrostatistics
+  - blazars
+  - X-ray variability
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Terzić"
+      given-names: "Tomislav"
+      affiliation: "University of Rijeka, Faculty of Physics"
+      orcid: "https://orcid.org/0000-0002-4209-3407"  # TODO: insert your ORCID iD
+  title: >-
+    A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution
+  year: 2026
+  status: submitted
+  identifiers:
+    - type: other
+      value: "arXiv:2606.28146"
+      description: "arXiv preprint"
