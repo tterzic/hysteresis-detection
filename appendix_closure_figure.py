@@ -12,7 +12,7 @@ the large-f / small-d case is degenerate.
 
 Output
 ------
-figures/appendix_closure_examples.pdf
+results/appendix_closure_examples.pdf
 
 Usage
 -----
@@ -35,7 +35,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent))
 from hysteresis_core import compute_areas
 
-Path("figures").mkdir(exist_ok=True)
+Path("results").mkdir(exist_ok=True)
 
 plt.rcParams.update({
     "font.family": "serif",
