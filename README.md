@@ -257,7 +257,10 @@ If you use this code, please cite:
 @article{Terzic2026,
   author  = {Terzi{\'c}, T.},
   title   = {A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution},
-  journal = {A\&A},
+  eprint = "2606.28146",
+  archivePrefix = "arXiv",
+  primaryClass = "astro-ph.HE",
+  journal = {},
   year    = {2026},
   note    = {submitted}
 }
