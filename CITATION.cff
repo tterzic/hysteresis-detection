@@ -31,8 +31,8 @@ preferred-citation:
     A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution
   year: 2026
   status: submitted
+  url: "https://arxiv.org/abs/2606.28146"
   identifiers:
     - type: other
       value: "arXiv:2606.28146"
       description: "arXiv preprint"
-      url: "https://arxiv.org/abs/2606.28146"
