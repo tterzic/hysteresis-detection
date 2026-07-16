@@ -8,6 +8,7 @@ This code accompanies:
 > "A statistically robust framework for detecting and classifying hysteresis patterns in astrophysical spectral evolution"
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21401246.svg)](https://doi.org/10.5281/zenodo.21401246)
+DOI: [10.5281/zenodo.214012466](https://doi.org/10.5281/zenodo.214012466)
 ---
 
 ## What this code does
